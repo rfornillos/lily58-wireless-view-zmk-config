@@ -20,11 +20,11 @@
             tapping-term-ms = <200>;
         };
 
-        dtt: dtt {
+        dt: dt {
             compatible = "zmk,behavior-tap-dance";
-            label = "double triple tap";
+            label = "double tap";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&kt CAPSLOCK>, <&kt LOCKING_CAPS>;
+            bindings = <&kp LEFT_CONTROL>, <&kt CAPSLOCK>;
         };
     };
 
@@ -52,7 +52,7 @@
             bindings = <
 &kp ESC    &kp N1  &kp N2  &kp N3            &kp N4        &kp N5                                &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp GRAVE
 &kp TAB    &kp Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&dtt       &kp A   &kp S   &kp D             &kp F         &kp G                                 &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&dt        &kp A   &kp S   &kp D             &kp F         &kp G                                 &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C             &kp V         &kp B         &kp LBKT     &kp RBKT   &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
                            &kp LEFT_COMMAND  &kp LEFT_ALT  &hlt 1 ENTER  &kp SPACE    &kp SPACE  &hlt 2 SPACE  &kp BSPC  &kp RGUI
             >;
