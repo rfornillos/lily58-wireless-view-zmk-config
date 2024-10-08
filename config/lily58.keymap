@@ -37,6 +37,15 @@
         };
     };
 
+    macros {
+        ScreenShot: ScreenShot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_COMMAND &kp LEFT_SHIFT &kp NUMBER_4>;
+            label = "SCREENSHOT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,11 +59,11 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3            &kp N4        &kp N5                                &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
-&kp TAB    &kp Q   &kp W   &kp E             &kp R         &kp T                                 &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
-&dtcc      &kp A   &kp S   &kp D             &kp F         &kp G                                 &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z   &kp X   &kp C             &kp V         &kp B         &kp LBKT     &kp RBKT   &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
-                           &kp LEFT_COMMAND  &kp LEFT_ALT  &hlt 1 ENTER  &kp SPACE    &kp SPACE  &hlt 2 SPACE  &kp BSPC  &kp RGUI
+&kp GRAVE  &kp N1  &kp N2  &kp N3        &kp N4            &kp N5                          &kp N6        &kp N7    &kp N8     &kp N9   &kp N0    &kp BACKSPACE
+&kp TAB    &kp Q   &kp W   &kp E         &kp R             &kp T                           &kp Y         &kp U     &kp I      &kp O    &kp P     &kp MINUS
+&dtcc      &kp A   &kp S   &kp D         &kp F             &kp G                           &kp H         &kp J     &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z   &kp X   &kp C         &kp V             &kp B   &kp LBKT     &kp RBKT   &kp N         &kp M     &kp COMMA  &kp DOT  &kp FSLH  &kp RIGHT_SHIFT
+                           &kp LEFT_ALT  &kp LEFT_COMMAND  &mo 1   &kp ENTER    &kp SPACE  &hlt 2 SPACE  &kp BSPC  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -70,11 +79,11 @@
 
             display-name = "Lower";
             bindings = <
-&kp ESCAPE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                    &kp A      &trans     &trans           &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6                          &kp F7     &kp F8     &kp F9           &kp F10         &kp F11            &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                       &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR        &kp UP_ARROW       &kp TILDE
-&trans      &trans        &trans        &trans        &trans        &trans        &trans    &trans  &trans     &kp MINUS  &kp KP_PLUS      &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW
-                                        &trans        &trans        &trans        &trans    &trans  &trans     &trans     &trans
+&kp ESCAPE  &trans    &trans  &trans    &ScreenShot  &trans                       &bt BT_SEL 0  &bt BT_SEL 1  &trans           &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP
+&kp F1      &kp F2    &kp F3  &kp F4    &kp F5       &kp F6                       &kp F7        &kp F8        &kp F9           &kp F10         &kp F11            &kp F12
+&kp GRAVE   &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR   &kp PRCNT                    &kp CARET     &kp AMPS      &kp KP_MULTIPLY  &kp LPAR        &kp UP_ARROW       &kp TILDE
+&trans      &trans    &trans  &trans    &trans       &trans     &trans    &trans  &trans        &kp MINUS     &kp KP_PLUS      &kp LEFT_ARROW  &kp DOWN_ARROW     &kp RIGHT_ARROW
+                              &trans    &trans       &trans     &trans    &trans  &trans        &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
