@@ -32,7 +32,7 @@
         compatible = "zmk,combos";
 
         KeyPad {
-            bindings = <&to 3>;
+            bindings = <&tog 3>;
             key-positions = <55 52>;
             layers = <3>;
         };
